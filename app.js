@@ -36,10 +36,10 @@ app.post("/",function(req,res){
     };
 
     const jsonData = JSON.stringify(data);
-    const url= "https://us6.api.mailchimp.com/3.0/lists/d7653a092d";
+    const url= "https://usX.api.mailchimp.com/3.0/lists/<Mailchimp Audience listid>";
     const options={
         method: "POST",
-        auth: "mrudul:572382577766fb906b9dc6fb134ba96b-us6"
+        auth: "mrudul:<Mailchimp API key>"
     }
 
     const request = https.request(url,options, function(response){
@@ -71,8 +71,3 @@ app.post("/success",function(req,res){
 app.listen(process.env.PORT || 3000,function(){
     console.log("visit port 3001");
 })
-//API KEY
-//572382577766fb906b9dc6fb134ba96b-us6
-
-//List ID
-//d7653a092d
